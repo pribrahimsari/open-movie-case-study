@@ -56,3 +56,23 @@ npm start
 @TODO
 - **Visit the link on your favorite browser:** http://localhost:5173/
     - Note: Vite uses port `5173` port 
+
+
+## Desired Features
+- Filmler bir tablo/grid içerisinde listelenebilmedir. Minimum filmin adı, yayınlandığı tarih ve IMDb ID’si kolonları bulunmalıdır
+- Her sayfada 10 film olacak şekilde sayfalama yapılmalıdır
+- Grid/tablo üzerinde bir textfield ile film adına göre arama yapılabilmelidir. Uygulama ilk açıldığında default Pokemon aratılmış gibi davranılması istenmektedir
+- Kullanıcı sadece istediği yılda vizyona girmiş filmleri listeleyebilmelidir
+- Kullanıcı isterse sadece filmleri, sadece dizileri ya da sadece dizi bölümlerini aratabilmelidir
+- Film adına tıklandığında, kullanıcı filmin afişini ve diğer detaylarının (başlık, süre, tür, yönetmen, oyuncular, IMDb puanı vb.) görüntülenebileceği başka bir sayfaya yönlenlendirilmelidir
+
+## Technical Requirements
+- DONE: ~~Framework olarak React kullanılmalıdır~~
+- DONE: ~~Film bilgilerini çekmek için OMDb API (http://www.omdbapi.com/) kullanılmalıdır~~
+- DONE: ~~TypeScript ya da ES5+ kullanılabilir.~~
+- Uygulamayı ayağa kaldırmak gerekli komutlar tercihen README.md içerisinde iletilmelidir
+- Custom styling için SASS/LESS/SCSS kullanımı artı puan olarak değerlendirilecektir
+- State yönetimi Redux kullanımı artı puan olarak değerlendirilecektir
+- React Hooks kullanımı artı puan olarak değerlendirilecektir
+- Lodash, Underscore.js, moment vb. utility kütüphaneleri kullanılabilir
+- Bootstrap, Semantic UI, Material UI vb. CSS frameworkleri kullanılabilir
