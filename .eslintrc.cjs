@@ -15,4 +15,12 @@ module.exports = {
       { allowConstantExport: true },
     ],
   },
+  // "settings": {
+  //   "import/resolver": {
+  //     "node": {
+  //       "paths": ["src"],
+  //       "extensions": [".js", ".jsx", ".ts", ".tsx"]
+  //     }
+  //   }
+  // }
 }
