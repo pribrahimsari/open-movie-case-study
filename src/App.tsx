@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from "react-query";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Container, CssBaseline } from "@mui/material";
-import HomePage from "src/pages/HomePage.tsx";
+import HomePage from "src/pages/Home/HomePage.tsx";
 import ErrorPage from "src/pages/ErrorPage.tsx";
 import MoviePage from "src/pages/MoviePage.tsx";
 import "src/App.scss";
