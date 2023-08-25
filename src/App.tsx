@@ -1,9 +1,12 @@
+import { QueryClient, QueryClientProvider } from "react-query";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Container, CssBaseline } from "@mui/material";
 import HomePage from "src/pages/HomePage.tsx";
 import ErrorPage from "src/pages/ErrorPage.tsx";
 import MoviePage from "src/pages/MoviePage.tsx";
 import "src/App.scss";
+
+const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
@@ -20,10 +23,12 @@ const router = createBrowserRouter([
 
 const App = () => {
   return (
-    <Container component="main" maxWidth="md">
-      <CssBaseline />
-      <RouterProvider router={router} />
-    </Container>
+    <QueryClientProvider client={queryClient}>
+      <Container component="main" maxWidth="md">
+        <CssBaseline />
+        <RouterProvider router={router} />
+      </Container>
+    </QueryClientProvider>
   );
 };
 
