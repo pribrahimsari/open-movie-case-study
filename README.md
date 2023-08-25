@@ -1,27 +1,58 @@
-# React + TypeScript + Vite
+@Todo: Check readme at the end
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Open Movie Case Study
+TODO: Description
 
-Currently, two official plugins are available:
+React + TypeScript + Vite application 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Demo
+TODO: 
 
-## Expanding the ESLint configuration
+Visit the link: [Open Movie Case Study](https://TODO.vercel.app/)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
+Created/Started via Vite's TypeScript + React minimal setup: `npm create@latest vite open-movie-case-study --template react-ts`
 
-- Configure the top-level `parserOptions` property like this:
+## Libs
+TODO: 
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+- Frontend Bundler: [Vite](https://vitejs.dev/)
+- Frontend Framework: [React](https://react.dev/)
+- API: [Open Movie DataBase](https://www.omdbapi.com/)
+- UI : [MaterialUI v5](https://mui.com/)
+- Linting Utility: [ESLint](https://eslint.org/)
+- Code Formatter: [Prettier](https://prettier.io/)
+- VCS: Git
+- Deployment: [Vercel](https://vercel.com/)
+
+## Test in local environment
+
+- **Clone repo:**
+```bash
+git clone https://github.com/pribrahimsari/open-movie-case-study.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **Install dependencies:**
+```bash
+npm install
+```
+
+- **Create `.env.local` file at root:**
+    - You can copy or rename `.env.local.example` file already available
+
+
+- **Get Your [Open Moview Database API key](https://omdbapi.com/) and paste it to your env file**
+    - Final .env file should look like:
+```.env
+VITE_OMDB_API_URL=https://TODO
+VITE_OMDB_API_KEY=<<YOUR_OMDB_API_KEY>>
+```
+
+- **Run:**
+```bash
+npm start
+```
+
+@TODO
+- **Visit the link on your favorite browser:** http://localhost:5173/
+    - Note: Vite uses port `5173` port 
