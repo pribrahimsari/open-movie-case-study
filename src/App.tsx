@@ -1,9 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Container, CssBaseline } from "@mui/material";
-import ErrorPage from "./pages/ErrorPage.tsx";
-import HomePage from "./pages/HomePage.tsx";
-import MoviePage from "./pages/MoviePage.tsx";
-import "./App.scss";
+import HomePage from "src/pages/HomePage.tsx";
+import ErrorPage from "src/pages/ErrorPage.tsx";
+import MoviePage from "src/pages/MoviePage.tsx";
+import "src/App.scss";
 
 const router = createBrowserRouter([
   {
