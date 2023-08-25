@@ -76,3 +76,5 @@ export type Rating = {
   Source: string;
   Value: string;
 };
+
+export type MovieType = "movie" | "series" | "episode";
