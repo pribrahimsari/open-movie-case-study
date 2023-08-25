@@ -43,8 +43,8 @@ npm install
 
 - **Get Your [Open Moview Database API key](https://omdbapi.com/) and paste it to your env file**
     - Final .env file should look like:
-```.env
-VITE_OMDB_API_URL=https://TODO
+```.env.local
+VITE_OMDB_API_URL=https://www.omdbapi.com/
 VITE_OMDB_API_KEY=<<YOUR_OMDB_API_KEY>>
 ```
 
