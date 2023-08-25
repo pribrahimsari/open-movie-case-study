@@ -3,6 +3,7 @@ import { Container, CssBaseline } from "@mui/material";
 import ErrorPage from "./pages/ErrorPage.tsx";
 import HomePage from "./pages/HomePage.tsx";
 import MoviePage from "./pages/MoviePage.tsx";
+import "./App.scss";
 
 const router = createBrowserRouter([
   {
