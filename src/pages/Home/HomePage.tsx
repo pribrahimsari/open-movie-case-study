@@ -1,19 +1,9 @@
-import { useQuery } from "react-query";
-import { getMovies } from "src/api/api.ts";
-import { Movie } from "src/types/movie.ts";
-import { GetMoviesQueryVariables } from "src/types/query.ts";
+import useMovies from "src/hooks/useMovies.tsx";
 
 const HomePage = () => {
-  const queryVariables: GetMoviesQueryVariables = {
-    s: "Pokemon",
-    page: 1,
-    year: 1800,
-    type: "episode",
-  };
+  const test = useMovies();
 
-  const getMoviesQ = useQuery<Movie[], Error>("getMovies", () => getMovies(queryVariables), { keepPreviousData: true });
-
-  console.debug({ getMoviesQ });
+  console.debug({ test });
 
   return <div>TODO: movie search</div>;
 };
