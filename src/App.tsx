@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { CssBaseline } from "@mui/material";
+import { Container, CssBaseline } from "@mui/material";
 import ErrorPage from "./pages/ErrorPage.tsx";
 import HomePage from "./pages/HomePage.tsx";
 import MoviePage from "./pages/MoviePage.tsx";
@@ -19,10 +19,10 @@ const router = createBrowserRouter([
 
 const App = () => {
   return (
-    <>
+    <Container component="main" maxWidth="md">
       <CssBaseline />
       <RouterProvider router={router} />
-    </>
+    </Container>
   );
 };
 
