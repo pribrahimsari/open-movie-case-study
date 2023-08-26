@@ -1,6 +1,5 @@
-import { GetMoviesQueryVariables } from "src/types/query.ts";
+import { GetMoviesQueryVariables, MovieResponseData } from "src/types/query.ts";
 import { useQuery } from "react-query";
-import { Movie } from "src/types/movie.ts";
 import { getMovies } from "src/api/api.ts";
 
 const useMovies = () => {
@@ -12,7 +11,7 @@ const useMovies = () => {
     // type: "episode",
   };
 
-  return useQuery<Movie[], Error>("getMovies", () => getMovies(queryVariables), { keepPreviousData: true });
+  return useQuery<MovieResponseData, Error>("getMovies", () => getMovies(queryVariables), { keepPreviousData: true });
 };
 
 export default useMovies;
