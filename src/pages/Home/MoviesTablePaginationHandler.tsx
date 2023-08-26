@@ -5,13 +5,13 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 const MoviesTablePaginationHandler = () => {
   return (
     <Box display="flex" justifyContent="flex-end" gap={1}>
-      <Tooltip title={"Previous Page"}>
-        <IconButton size="small" aria-label="previous page">
+      <Tooltip title={"Previous"}>
+        <IconButton size="small" aria-label="Previous">
           <ArrowBackIosIcon />
         </IconButton>
       </Tooltip>
-      <Tooltip title={"Next Page"}>
-        <IconButton size="small" aria-label="next page">
+      <Tooltip title={"Next"}>
+        <IconButton size="small" aria-label="Next">
           <ArrowForwardIosIcon />
         </IconButton>
       </Tooltip>
