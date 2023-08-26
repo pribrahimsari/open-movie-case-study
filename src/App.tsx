@@ -7,6 +7,7 @@ import MovieDetailsPage from "src/pages/MovieDetails/MovieDetailsPage.tsx";
 import "src/App.scss";
 import { Provider } from "react-redux";
 import { searchVariablesStore } from "src/redux/SearchVariablesStore/SearchVariablesStore.ts";
+import Footer from "src/components/Footer.tsx";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => {
         <Container component="main" maxWidth="md">
           <CssBaseline />
           <RouterProvider router={router} />
+          <Footer />
         </Container>
       </QueryClientProvider>
     </Provider>
