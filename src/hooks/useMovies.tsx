@@ -1,16 +1,10 @@
-import { GetMoviesQueryVariables, MovieResponseData } from "src/types/query.ts";
+import { MovieResponseData } from "src/types/query.ts";
 import { useQuery } from "react-query";
 import { getMovies } from "src/api/api.ts";
+import { useSearchVariablesSelector } from "src/redux/SearchVariablesStore/SearchVariablesStore.ts";
 
 const useMovies = () => {
-  // todo: state
-  const queryVariables: GetMoviesQueryVariables = {
-    s: "Pokemon",
-    page: 1,
-    // year: 1800,
-    // type: "episode",
-  };
-
+  const queryVariables = useSearchVariablesSelector((state) => state.searchVariables);
   return useQuery<MovieResponseData, Error>("getMovies", () => getMovies(queryVariables), { keepPreviousData: true });
 };
 
