@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Container, CssBaseline } from "@mui/material";
 import HomePage from "src/pages/Home/HomePage.tsx";
 import ErrorPage from "src/pages/ErrorPage.tsx";
-import MoviePage from "src/pages/MoviePage.tsx";
+import MovieDetailsPage from "src/pages/MovieDetails/MovieDetailsPage.tsx";
 import "src/App.scss";
 
 const queryClient = new QueryClient();
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/movie/:imdbId",
-    element: <MoviePage />,
+    element: <MovieDetailsPage />,
     errorElement: <ErrorPage />,
   },
 ]);
