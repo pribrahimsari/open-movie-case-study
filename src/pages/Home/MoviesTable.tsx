@@ -12,6 +12,9 @@ const headCells = [
   { id: "imdbRating", label: "IMDB Rating" },
 ];
 
+/**
+ * Movies Table Head Cells
+ */
 const MoviesTableHead = () => {
   return (
     <TableHead>
@@ -60,10 +63,11 @@ const MovieTableRow = ({ movie }: { movie: Movie }) => {
   );
 };
 
+/**
+ * Container component to handle table operations
+ */
 const MoviesTable = () => {
   const { data, isLoading } = useMovies();
-
-  // console.debug({ data });
 
   return (
     <TableContainer>
