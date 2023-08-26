@@ -77,7 +77,7 @@ const MovieSearchForm = () => {
         <Button size="small" variant="outlined" startIcon={<RestartAltIcon />} onClick={handleResetClick}>
           Reset
         </Button>
-        <Button size="small" variant="contained" startIcon={<SearchIcon />} onClick={handleSearchClick}>
+        <Button size="small" variant="contained" startIcon={<SearchIcon />} onClick={handleSearchClick} disabled={title.trim() === ""}>
           Search
         </Button>
       </Box>
