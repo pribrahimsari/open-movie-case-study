@@ -5,7 +5,7 @@ import { useSearchVariablesSelector } from "src/redux/SearchVariablesStore/Searc
 
 const useMovies = () => {
   const queryVariables = useSearchVariablesSelector((state) => state.searchVariables);
-  return useQuery<MovieResponseData, Error>("getMovies", () => getMovies(queryVariables), { keepPreviousData: true });
+  return useQuery<MovieResponseData, Error>(["getMovies", queryVariables], () => getMovies(queryVariables));
 };
 
 export default useMovies;
