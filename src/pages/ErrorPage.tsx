@@ -1,4 +1,6 @@
 import { isRouteErrorResponse, useRouteError } from "react-router-dom";
+import { Divider } from "@mui/material";
+import NavigateBack from "src/components/NavigateBack.tsx";
 
 const ErrorPage = () => {
   const error = useRouteError();
@@ -25,6 +27,10 @@ const ErrorPage = () => {
       <p>
         <i>{errorMessage}</i>
       </p>
+
+      <Divider sx={{ margin: "1rem" }} />
+
+      <NavigateBack />
     </div>
   );
 };
