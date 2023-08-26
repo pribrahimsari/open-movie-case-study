@@ -35,7 +35,21 @@ const MovieSearchForm = () => {
   return (
     <Box display="flex" justifyContent="space-between" gap={1}>
       <Box flexGrow={1}>
-        <TextField fullWidth label="Movie Title" variant="outlined" size="small" required value={title} onChange={(e) => setTitle(e.target.value)} />
+        <TextField
+          fullWidth
+          label="Movie Title"
+          variant="outlined"
+          size="small"
+          required
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              e.preventDefault();
+              handleSearchClick();
+            }
+          }}
+        />
       </Box>
 
       <TextField
