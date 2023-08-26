@@ -89,7 +89,7 @@ const MoviesTable = () => {
             </TableRow>
           )}
 
-          {/* loading */}
+          {/* results */}
           {!isLoading && data && data?.Search?.length && data.Search.map((movie) => <MovieTableRow key={movie.imdbID} movie={movie} />)}
         </TableBody>
       </Table>
