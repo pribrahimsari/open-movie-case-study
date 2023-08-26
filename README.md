@@ -1,10 +1,6 @@
 # Open Movie DB Search | Case Study
 A small React + Redux + TypeScript + Vite project where you can search for movies using the [Open Movie Database API](https://omdbapi.com/) and view movie details, within the criteria set by a company I applied for.
 
-Created/Started via Vite's TypeScript + React minimal setup: 
-
-`npm create@latest vite open-movie-case-study --template react-ts`
-
 ## Live Demo
 Visit the link: [Open Movie Case Study - https://omdb-search.isari.me/](https://omdb-search.isari.me/)
 
@@ -57,21 +53,21 @@ npm start
 
 
 ## Desired Features
-- DONE: ~~Filmler bir tablo/grid içerisinde listelenebilmedir. Minimum filmin adı, yayınlandığı tarih ve IMDb ID’si kolonları bulunmalıdır~~
-- DONE: ~~Her sayfada 10 film olacak şekilde sayfalama yapılmalıdır~~
-- DONE: ~~Grid/tablo üzerinde bir textfield ile film adına göre arama yapılabilmelidir. Uygulama ilk açıldığında default Pokemon aratılmış gibi davranılması istenmektedir~~
-- DONE: ~~Kullanıcı sadece istediği yılda vizyona girmiş filmleri listeleyebilmelidir~~
-- DONE: ~~Kullanıcı isterse sadece filmleri, sadece dizileri ya da sadece dizi bölümlerini aratabilmelidir~~
-- DONE: ~~Film adına tıklandığında, kullanıcı filmin afişini ve diğer detaylarının (başlık, süre, tür, yönetmen, oyuncular, IMDb puanı vb.) görüntülenebileceği başka bir sayfaya yönlenlendirilmelidir~~
+- [x] ~~Filmler bir tablo/grid içerisinde listelenebilmedir. Minimum filmin adı, yayınlandığı tarih ve IMDb ID’si kolonları bulunmalıdır~~
+- [x] ~~Her sayfada 10 film olacak şekilde sayfalama yapılmalıdır~~
+- [x] ~~Grid/tablo üzerinde bir textfield ile film adına göre arama yapılabilmelidir. Uygulama ilk açıldığında default Pokemon aratılmış gibi davranılması istenmektedir~~
+- [x] ~~Kullanıcı sadece istediği yılda vizyona girmiş filmleri listeleyebilmelidir~~
+- [x] ~~Kullanıcı isterse sadece filmleri, sadece dizileri ya da sadece dizi bölümlerini aratabilmelidir~~
+- [x] ~~Film adına tıklandığında, kullanıcı filmin afişini ve diğer detaylarının (başlık, süre, tür, yönetmen, oyuncular, IMDb puanı vb.) görüntülenebileceği başka bir sayfaya yönlenlendirilmelidir~~
   - Note: Redirecting on row click (instead of name click) seems better I think.
 
 ## Technical Requirements
-- DONE: ~~Framework olarak React kullanılmalıdır~~
-- DONE: ~~Film bilgilerini çekmek için OMDb API (http://www.omdbapi.com/) kullanılmalıdır~~
-- DONE: ~~TypeScript ya da ES5+ kullanılabilir.~~
-- DONE: ~~Uygulamayı ayağa kaldırmak gerekli komutlar tercihen README.md içerisinde iletilmelidir~~
-- DONE: ~~Custom styling için SASS/LESS/SCSS kullanımı artı puan olarak değerlendirilecektir~~
-- DONE: ~~State yönetimi Redux kullanımı artı puan olarak değerlendirilecektir~~
-- DONE: ~~React Hooks kullanımı artı puan olarak değerlendirilecektir~~
-- Lodash, Underscore.js, moment vb. utility kütüphaneleri kullanılabilir
-- Bootstrap, Semantic UI, Material UI vb. CSS frameworkleri kullanılabilir
+- [x] ~~Framework olarak React kullanılmalıdır~~
+- [x] ~~Film bilgilerini çekmek için OMDb API (http://www.omdbapi.com/) kullanılmalıdır~~
+- [x] ~~TypeScript ya da ES5+ kullanılabilir.~~
+- [x] ~~Uygulamayı ayağa kaldırmak gerekli komutlar tercihen README.md içerisinde iletilmelidir~~
+- [x] ~~Custom styling için SASS/LESS/SCSS kullanımı artı puan olarak değerlendirilecektir~~
+- [x] ~~State yönetimi Redux kullanımı artı puan olarak değerlendirilecektir~~
+- [x] ~~React Hooks kullanımı artı puan olarak değerlendirilecektir~~
+- [ ] Lodash, Underscore.js, moment vb. utility kütüphaneleri kullanılabilir
+- [x] ~~Bootstrap, Semantic UI, Material UI vb. CSS frameworkleri kullanılabilir~~
