@@ -1,16 +1,15 @@
 import useMovieDetails from "src/hooks/useMovieDetails.tsx";
-import { Alert, CircularProgress } from "@mui/material";
+import { Alert, Box, CircularProgress } from "@mui/material";
 import MovieDetails from "src/pages/MovieDetails/MovieDetails.tsx";
 
 const MovieDetailsContainer = ({ imdbId }: { imdbId: string }) => {
   const { isLoading, data: movie } = useMovieDetails(imdbId);
 
-  // todo: skeleton may be better
   if (isLoading) {
     return (
-      <div>
-        <CircularProgress />
-      </div>
+      <Box display="flex" justifyContent="center" alignItems="center">
+        <CircularProgress size="3rem" />
+      </Box>
     );
   }
 
