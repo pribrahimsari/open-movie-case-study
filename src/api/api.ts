@@ -13,3 +13,10 @@ export const getMovies = ({ s, page, type, year }: GetMoviesQueryVariables) => {
 
   return fetch(fetchUrl).then((res) => res.json());
 };
+
+export const getMovieDetails = (imdbId: string) => {
+  let fetchUrl = API_URL;
+  fetchUrl += `&i=${imdbId}`;
+
+  return fetch(fetchUrl).then((res) => res.json());
+};
