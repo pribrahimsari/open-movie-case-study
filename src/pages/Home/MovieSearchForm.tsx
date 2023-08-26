@@ -13,7 +13,7 @@ const MovieSearchForm = () => {
   const dispatch = useSearchVariablesDispatch();
 
   const [title, setTitle] = useState(searchVariables.s);
-  const [year, setYear] = useState(String(searchVariables.year) || "");
+  const [year, setYear] = useState(searchVariables.year || "");
   const [type, setType] = useState<MovieType | undefined | "">(searchVariables.type || "");
 
   const handleResetClick = () => {
