@@ -13,9 +13,11 @@ const MoviesTablePaginationHandler = () => {
       <Typography variant="body2">Page: {page}</Typography>
 
       <Tooltip title={"Previous"}>
-        <IconButton size="small" aria-label="Previous" disabled={page === 1} onClick={() => dispatch(previousPage())}>
-          <ArrowBackIosIcon />
-        </IconButton>
+        <span>
+          <IconButton size="small" aria-label="Previous" disabled={page === 1} onClick={() => dispatch(previousPage())}>
+            <ArrowBackIosIcon />
+          </IconButton>
+        </span>
       </Tooltip>
       <Tooltip title={"Next"}>
         <IconButton size="small" aria-label="Next" onClick={() => dispatch(nextPage())}>
