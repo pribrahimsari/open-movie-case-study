@@ -1,4 +1,4 @@
-import { Skeleton, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
+import { Skeleton, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import useMovies from "src/hooks/useMovies.tsx";
 import { Movie } from "src/types/movie.ts";
@@ -81,7 +81,11 @@ const MoviesTable = () => {
           {/* no results */}
           {!isLoading && !data?.Search?.length && (
             <TableRow>
-              <TableCell colSpan={headCells.length}>No results todo</TableCell>
+              <TableCell colSpan={headCells.length} align="center">
+                <Typography variant="body2">
+                  <i>-- No Results --</i>
+                </Typography>
+              </TableCell>
             </TableRow>
           )}
 
