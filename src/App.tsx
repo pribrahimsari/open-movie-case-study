@@ -5,6 +5,8 @@ import HomePage from "src/pages/Home/HomePage.tsx";
 import ErrorPage from "src/pages/ErrorPage.tsx";
 import MovieDetailsPage from "src/pages/MovieDetails/MovieDetailsPage.tsx";
 import "src/App.scss";
+import { Provider } from "react-redux";
+import { searchVariablesStore } from "src/redux/SearchVariablesStore/SearchVariablesStore.ts";
 
 const queryClient = new QueryClient();
 
@@ -23,12 +25,14 @@ const router = createBrowserRouter([
 
 const App = () => {
   return (
-    <QueryClientProvider client={queryClient}>
-      <Container component="main" maxWidth="md">
-        <CssBaseline />
-        <RouterProvider router={router} />
-      </Container>
-    </QueryClientProvider>
+    <Provider store={searchVariablesStore}>
+      <QueryClientProvider client={queryClient}>
+        <Container component="main" maxWidth="md">
+          <CssBaseline />
+          <RouterProvider router={router} />
+        </Container>
+      </QueryClientProvider>
+    </Provider>
   );
 };
 
