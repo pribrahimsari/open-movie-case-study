@@ -7,16 +7,27 @@ export const searchVariablesSlice = createSlice({
   initialState: INITIAL_SEARCH_VARIABLES,
   reducers: {
     nextPage: (state) => {
-      state.page += 1;
+      return {
+        ...state,
+        page: state.page + 1,
+      };
     },
     previousPage: (state) => {
-      if (state.page > 1) state.page -= 1;
+      if (state.page > 1) {
+        return {
+          ...state,
+          page: state.page - 1,
+        };
+      }
     },
     changeSearchVariables: (state, action: PayloadAction<GetMoviesQueryVariables>) => {
-      state.s = action.payload.s;
-      state.page = action.payload.page || 1;
-      state.year = action.payload.year;
-      state.type = action.payload.type;
+      return {
+        ...state,
+        s: action.payload.s,
+        page: action.payload.page || 1,
+        year: action.payload.year,
+        type: action.payload.type,
+      };
     },
   },
 });
