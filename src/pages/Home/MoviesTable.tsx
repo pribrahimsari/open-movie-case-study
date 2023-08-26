@@ -1,6 +1,8 @@
-import useMovies from "src/hooks/useMovies.tsx";
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import useMovies from "src/hooks/useMovies.tsx";
 import { Movie } from "src/types/movie.ts";
+import styles from "src/pages/Home/home.module.scss";
 
 const headCells = [
   { id: "imdbId", label: "IMDB ID" },
@@ -23,8 +25,14 @@ const MoviesTableHead = () => {
 };
 
 const MovieTableRow = ({ movie }: { movie: Movie }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/movie/${movie.imdbID}`);
+  };
+
   return (
-    <TableRow>
+    <TableRow hover className={styles.movieRow} onClick={handleClick}>
       <TableCell>{movie.imdbID}</TableCell>
       <TableCell>{movie.Title}</TableCell>
       <TableCell>{movie.Year}</TableCell>
