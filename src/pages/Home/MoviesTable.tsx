@@ -1,4 +1,4 @@
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
+import { Skeleton, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import useMovies from "src/hooks/useMovies.tsx";
 import { Movie } from "src/types/movie.ts";
@@ -17,13 +17,31 @@ const MoviesTableHead = () => {
     <TableHead>
       <TableRow>
         {headCells.map((headCell) => (
-          <TableCell key={headCell.id}>{headCell.label}</TableCell>
+          <TableCell width={headCell.id === "title" ? "50%" : undefined} key={headCell.id}>
+            {headCell.label}
+          </TableCell>
         ))}
       </TableRow>
     </TableHead>
   );
 };
 
+/**
+ * Display MUI's Skeleton text variant while API request is loading
+ */
+const SkeletonLoadingRow = () => {
+  return (
+    <TableRow>
+      <TableCell colSpan={headCells.length}>
+        <Skeleton variant="text" />
+      </TableCell>
+    </TableRow>
+  );
+};
+
+/**
+ * Table row for a movie record
+ */
 const MovieTableRow = ({ movie }: { movie: Movie }) => {
   const navigate = useNavigate();
 
@@ -54,11 +72,7 @@ const MoviesTable = () => {
 
         <TableBody>
           {/* loading */}
-          {isLoading && (
-            <TableRow>
-              <TableCell colSpan={headCells.length}>Loading todo</TableCell>
-            </TableRow>
-          )}
+          {isLoading && [...Array(10).keys()].map((i) => <SkeletonLoadingRow key={i} />)}
 
           {/* no results */}
           {!isLoading && !data?.Search?.length && (
